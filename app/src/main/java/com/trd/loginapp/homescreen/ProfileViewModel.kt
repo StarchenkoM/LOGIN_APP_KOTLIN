@@ -9,6 +9,7 @@ import com.trd.loginapp.usecases.LoadUserDataUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import java.lang.Exception
 import javax.inject.Inject
 
 @HiltViewModel
@@ -21,8 +22,12 @@ class ProfileViewModel @Inject constructor(
 
     fun loadUserData(userPhoneNumber: String) {
         viewModelScope.launch(Dispatchers.IO) {
-            val state = loadUserDataUseCase.loadUserData(userPhoneNumber)
-            _userLoadingStateLiveData.postValue(state)
+            try {
+                val state = loadUserDataUseCase.loadUserData(userPhoneNumber)
+                _userLoadingStateLiveData.postValue(state)
+            }catch (e:Exception){
+                _userLoadingStateLiveData.postValue(LoadingState.LoadingError)
+            }
         }
     }
 }

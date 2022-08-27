@@ -1,5 +1,6 @@
 package com.trd.loginapp.di
 
+import com.trd.loginapp.api.LoginApi
 import com.trd.loginapp.database.DataMapper
 import com.trd.loginapp.database.UserDao
 import com.trd.loginapp.repository.AppRepository
@@ -31,9 +32,10 @@ class AppModule {
     //Repositories
     @Provides
     fun provideLoginRepository(
+        loginApi: LoginApi,
         userDao: UserDao,
         dataMapper: DataMapper,
-    ): AppRepository = AppRepositoryImpl(userDao, dataMapper)
+    ): AppRepository = AppRepositoryImpl(loginApi, userDao, dataMapper)
 
     //Use Cases
     @Provides

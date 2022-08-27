@@ -1,19 +1,22 @@
 package com.trd.loginapp.repository
 
 import android.util.Log
+import com.trd.loginapp.api.LoginApi
 import com.trd.loginapp.api.LoginData
-import com.trd.loginapp.api.RetrofitInstance
 import com.trd.loginapp.database.DataMapper
 import com.trd.loginapp.database.UserDao
 import com.trd.loginapp.states.LoadingState
 import com.trd.loginapp.states.LoginState
+import javax.inject.Inject
 
-class AppRepositoryImpl(
+class AppRepositoryImpl @Inject constructor(
+    private val loginApi: LoginApi,
     private val userDao: UserDao,
     private val dataMapper: DataMapper,
 ) : AppRepository {
     override suspend fun postLoginData(loginData: LoginData): LoginState {
-        val response = RetrofitInstance.api.postLoginData(loginData)
+//        val response = RetrofitInstance.api.postLoginData(loginData)
+        val response = loginApi.postLoginData(loginData)
         Log.i("***888", "postLoginData: responce = $response")
         Log.i("***888", "postLoginData: responce.body() = ${response.body()}")
         return if (response.isSuccessful) {
