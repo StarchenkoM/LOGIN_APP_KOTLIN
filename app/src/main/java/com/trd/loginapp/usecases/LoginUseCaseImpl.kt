@@ -20,9 +20,9 @@ class LoginUseCaseImpl @Inject constructor(
         } else if (phoneNumber.isEmpty()) {
             EmptyPhoneNumber
         } else if (!phoneNumber.contains('+')) {
-            PhoneCodeMissedPlusSymbol
+            MissedPlusSymbolError
         } else if (phoneNumber.length < PHONE_NUMBER_MIN_LENGTH) {
-            PhoneNumberToShort
+            PhoneNumberTooShort
         } else if (!Patterns.PHONE.matcher(phoneNumber).matches()) {
             InvalidPhoneNumber
         } else if (password.isEmpty()) {

@@ -2,15 +2,13 @@ package com.trd.loginapp.states
 
 enum class LoginState {
     LoginSuccess,
-    InvalidCredentials,
     NetworkFailure,
-    PhoneNumberToShort,
-    PhoneCodeMissedPlusSymbol,
-    EmptyPhoneCode,
+    PhoneNumberTooShort,
+    MissedPlusSymbolError,
     EmptyPhoneNumber,
     EmptyPassword,
-    InvalidPhoneCode,
     InvalidPhoneNumber,
     UnknownFailure,
     LoginError,
+    Loading,
 }

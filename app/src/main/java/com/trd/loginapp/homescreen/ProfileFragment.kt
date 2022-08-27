@@ -51,7 +51,7 @@ class ProfileFragment : Fragment() {
 
     private fun loadUserData() {
         args.userPhoneNumber?.let { viewModel.loadUserData(it) }
-            ?: toastUtils.showToast("Profile was loaded with error. Please try again")
+            ?: toastUtils.showUnknownErrorToast()
     }
 
     private fun initBinding(

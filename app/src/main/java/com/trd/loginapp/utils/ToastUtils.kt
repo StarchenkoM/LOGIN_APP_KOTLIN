@@ -1,13 +1,17 @@
 package com.trd.loginapp.utils
 
+import android.widget.Toast.LENGTH_SHORT
 import androidx.annotation.StringRes
 
 interface ToastUtils {
-    fun showToast(message: String)
-    fun showToast(@StringRes messageResId: Int)
-    fun showShortToast(message: String)
-    fun showShortToast(@StringRes messageResId: Int)
+    fun showToast(message: String, duration: Int = LENGTH_SHORT)
+    fun showToast(@StringRes messageResId: Int, duration: Int = LENGTH_SHORT)
     fun showNetworkErrorToast()
     fun showUnknownErrorToast()
-    fun showTooManyRequestToast()
+    fun showEmptyPhoneErrorToast()
+    fun showEmptyPasswordErrorToast()
+    fun showInvalidPhoneNumberErrorToast()
+    fun showLoginErrorToast()
+    fun showPhoneNumberTooShortErrorToast()
+    fun showMissedPlusSymbolErrorToast()
 }
