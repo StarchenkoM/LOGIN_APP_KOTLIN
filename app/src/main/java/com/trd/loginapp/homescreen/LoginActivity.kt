@@ -7,6 +7,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.trd.loginapp.Constants.PHONE_NUMBER_KEY
+import com.trd.loginapp.R
 import com.trd.loginapp.databinding.ActivityLoginBinding
 import com.trd.loginapp.states.LoginState
 import com.trd.loginapp.states.LoginState.*
@@ -26,9 +27,15 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
+        initToolbar()
         handleLoginBtnClick()
         observeLoginState()
         setContentView(binding.root)
+    }
+
+    private fun initToolbar() {
+        binding.appToolbar.title = getString(R.string.sign_in)
+        binding.appToolbar.setTitleTextColor(resources.getColor(R.color.white, null))
     }
 
     private fun handleLoginBtnClick() {
@@ -38,7 +45,6 @@ class LoginActivity : AppCompatActivity() {
             viewModel.login(phoneNumber, password)
         }
     }
-
 
     private fun observeLoginState() {
         viewModel.loginStateLiveData.observe(this) { state ->

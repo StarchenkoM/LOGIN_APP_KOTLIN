@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
+import com.trd.loginapp.R
 import com.trd.loginapp.database.UserItem
 import com.trd.loginapp.databinding.FragmentProfileBinding
 import com.trd.loginapp.states.LoadingState.*
@@ -32,9 +33,15 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = initBinding(inflater, container)
+        initToolbar()
         loadUserData()
         observeDataLoading()
         return binding.root
+    }
+
+    private fun initToolbar() {
+        binding.appToolbar.title = getString(R.string.profile_label)
+        binding.appToolbar.setTitleTextColor(resources.getColor(R.color.white, null))
     }
 
     private fun observeDataLoading() {
