@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/profile_fragment">
+
+    <fragment
+        android:id="@+id/profile_fragment"
+        android:name="com.trd.loginapp.homescreen.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+        <argument
+            android:name="userPhoneNumber"
+            android:defaultValue="Default"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+
+    <activity
+        android:id="@+id/home_screen_activity"
+        android:name="com.trd.loginapp.homescreen.HomeScreen"
+        android:label=""
+        tools:layout="@layout/activity_home_screen"/>
+
+    <activity
+        android:id="@+id/login_screen_activity"
+        android:name="com.trd.loginapp.homescreen.LoginActivity"
+        android:label="Sign in"
+        tools:layout="@layout/activity_login" />
+
+    <action
+        android:id="@+id/openProfileScreen"
+        app:destination="@id/profile_fragment">
+
+        <argument
+            android:name="userPhoneNumber"
+            app:argType="string"
+            app:nullable="true" />
+    </action>
+
+
+</navigation>

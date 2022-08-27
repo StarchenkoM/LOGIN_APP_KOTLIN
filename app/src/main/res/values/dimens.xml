@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="homescreen_action_bar_height">58dp</dimen>
+    <dimen name="elevation">6dp</dimen>
+    <dimen name="profile_hint">12sp</dimen>
+    <dimen name="tips_text_size">76sp</dimen>
+    <dimen name="icons_width">24dp</dimen>
+</resources>
