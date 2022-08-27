@@ -15,7 +15,6 @@ class AppRepositoryImpl @Inject constructor(
     private val dataMapper: DataMapper,
 ) : AppRepository {
     override suspend fun postLoginData(loginData: LoginData): LoginState {
-//        val response = RetrofitInstance.api.postLoginData(loginData)
         val response = loginApi.postLoginData(loginData)
         Log.i("***888", "postLoginData: responce = $response")
         Log.i("***888", "postLoginData: responce.body() = ${response.body()}")
