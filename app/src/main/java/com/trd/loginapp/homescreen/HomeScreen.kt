@@ -23,8 +23,6 @@ class HomeScreen : AppCompatActivity() {
     private fun getPhoneNumber(): String? {
         val data = intent.extras
         val number = data?.getString(PHONE_NUMBER_KEY)
-        Log.i("***888", "getPhoneNumber: data $data")
-        Log.i("***888", "getPhoneNumber: numberFromIntent $number")
         return number
     }
 

@@ -22,8 +22,6 @@ class AppRepositoryImpl @Inject constructor(
 ) : AppRepository {
     override suspend fun postLoginData(loginData: LoginData): LoginState {
         val response = loginApi.postLoginData(loginData)
-        Log.i("***888", "postLoginData: responce = $response")
-        Log.i("***888", "postLoginData: responce.body() = ${response.body()}")
         return provideLoginResult(response)
     }
 
@@ -43,7 +41,6 @@ class AppRepositoryImpl @Inject constructor(
     }
 
     override suspend fun getUserById(phoneNumber: String): LoadingState {
-        Log.i("***888", "getUserById: phoneNumberDBrequest = $phoneNumber")
         val dbItem = userDao.getUserById(phoneNumber)
         return if (dbItem != null) {
             val userItem = dataMapper.mapDBItemToUserItem(dbItem)

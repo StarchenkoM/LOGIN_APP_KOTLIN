@@ -72,10 +72,6 @@ class LoginActivity : AppCompatActivity() {
     private fun handleSuccessLoginState() {
         val intent = Intent(this, HomeScreen::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-        Log.i(
-            "***888",
-            "observeLoginState: binding.phoneNumberEdt.text = ${binding.phoneNumberEdt.text}"
-        )
         intent.putExtra(PHONE_NUMBER_KEY, binding.phoneNumberEdt.text.toString())
         startActivity(intent)
     }
