@@ -34,6 +34,10 @@ class ToastUtilsImpl(val context: Context) : ToastUtils {
         showToast(EMPTY_PASSWORD_MESSAGE, LENGTH_SHORT)
     }
 
+    override fun showPasswordTooShortErrorToast() {
+        showToast(PASSWORD_TOO_SHORT_MESSAGE, LENGTH_SHORT)
+    }
+
     override fun showInvalidPhoneNumberErrorToast() {
         showToast(INVALID_PHONE_NUMBER_MESSAGE, LENGTH_SHORT)
     }
@@ -56,6 +60,7 @@ class ToastUtilsImpl(val context: Context) : ToastUtils {
         const val UNKNOWN_ERROR_MESSAGE = R.string.unknown_error
         const val EMPTY_PHONE_NUMBER_MESSAGE = R.string.empty_phone_number_error
         const val EMPTY_PASSWORD_MESSAGE = R.string.empty_password_error
+        const val PASSWORD_TOO_SHORT_MESSAGE = R.string.password_too_short_error
         const val INVALID_PHONE_NUMBER_MESSAGE = R.string.invalid_phone_number_error
         const val LOGIN_ERROR_MESSAGE = R.string.login_error
         const val PHONE_NUMBER_TOO_SHORT_MESSAGE = R.string.phone_number_too_short_error

@@ -1,6 +1,7 @@
 package com.trd.loginapp.usecases
 
 import android.util.Patterns
+import com.trd.loginapp.Constants.PASSWORD_MIN_LENGTH
 import com.trd.loginapp.Constants.PHONE_NUMBER_MIN_LENGTH
 import com.trd.loginapp.api.LoginData
 import com.trd.loginapp.repository.AppRepository
@@ -27,6 +28,8 @@ class LoginUseCaseImpl @Inject constructor(
             InvalidPhoneNumber
         } else if (password.isEmpty()) {
             EmptyPassword
+        } else if (password.length < PASSWORD_MIN_LENGTH) {
+            PasswordTooShortError
         } else {
 
             /*TODO

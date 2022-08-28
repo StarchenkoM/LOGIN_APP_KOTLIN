@@ -6,4 +6,5 @@ object Constants {
     const val ROOM_DATABASE_VERSION = 1
     const val PHONE_NUMBER_KEY = "PHONE_NUMBER_KEY"
     const val PHONE_NUMBER_MIN_LENGTH = 12
+    const val PASSWORD_MIN_LENGTH = 4
 }

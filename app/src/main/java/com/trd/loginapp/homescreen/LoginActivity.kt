@@ -60,6 +60,7 @@ class LoginActivity : AppCompatActivity() {
             UnknownFailure -> toastUtils.showUnknownErrorToast()
             EmptyPhoneNumber -> toastUtils.showEmptyPhoneErrorToast()
             EmptyPassword -> toastUtils.showEmptyPasswordErrorToast()
+            PasswordTooShortError -> toastUtils.showPasswordTooShortErrorToast()
             InvalidPhoneNumber -> toastUtils.showInvalidPhoneNumberErrorToast()
             LoginError -> toastUtils.showLoginErrorToast()
             PhoneNumberTooShort -> toastUtils.showPhoneNumberTooShortErrorToast()

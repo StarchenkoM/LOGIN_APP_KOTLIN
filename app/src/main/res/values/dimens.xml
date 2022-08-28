@@ -6,7 +6,6 @@
     <dimen name="profile_hint_text_size">12sp</dimen>
     <dimen name="tips_text_size">76sp</dimen>
     <dimen name="icons_width">24dp</dimen>
-<!--    <dimen name="icon_margin_horizontal">16dp</dimen>-->
     <dimen name="button_height">38dp</dimen>
     <dimen name="button_margin_horizontal">32dp</dimen>
     <dimen name="elements_margin_top">24dp</dimen>

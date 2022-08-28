@@ -7,6 +7,7 @@ enum class LoginState {
     MissedPlusSymbolError,
     EmptyPhoneNumber,
     EmptyPassword,
+    PasswordTooShortError,
     InvalidPhoneNumber,
     UnknownFailure,
     LoginError,

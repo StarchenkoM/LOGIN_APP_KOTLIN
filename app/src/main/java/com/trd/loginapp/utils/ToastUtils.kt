@@ -10,6 +10,7 @@ interface ToastUtils {
     fun showUnknownErrorToast()
     fun showEmptyPhoneErrorToast()
     fun showEmptyPasswordErrorToast()
+    fun showPasswordTooShortErrorToast()
     fun showInvalidPhoneNumberErrorToast()
     fun showLoginErrorToast()
     fun showPhoneNumberTooShortErrorToast()

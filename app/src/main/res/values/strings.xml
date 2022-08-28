@@ -7,6 +7,7 @@
     <string name="phone_number_too_short_error">Phone Number too Short</string>
     <string name="phone_code_missed_plus_symbol_error">Missed Plus symbol in Phone Code</string>
     <string name="empty_password_error">Empty Password</string>
+    <string name="password_too_short_error">Password should contain at least 4 symbols</string>
     <string name="invalid_phone_number_error">Invalid Phone Number</string>
     <string name="login_error">Login Error</string>
     <string name="sign_in">Sign in</string>
