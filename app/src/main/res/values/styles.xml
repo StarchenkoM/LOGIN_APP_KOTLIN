@@ -15,7 +15,13 @@
         <item name="android:textSize">@dimen/profile_hint_text_size</item>
     </style>
 
-<!--    TODO create style for edt-->
+    <style name="LoginEditTextStyle" parent="android:Widget.EditText">
+        <item name="android:textColor">@color/text2</item>
+        <item name="android:layout_marginTop">@dimen/elements_margin_top</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_edt</item>
+        <item name="android:backgroundTint">@color/focused_item_color_selector</item>
+        <item name="android:textSize">@dimen/screen_fields_text_size</item>
+    </style>
 
 
 </resources>
