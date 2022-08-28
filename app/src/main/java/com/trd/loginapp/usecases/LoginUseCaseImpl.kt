@@ -32,14 +32,14 @@ class LoginUseCaseImpl @Inject constructor(
             PasswordTooShortError
         } else {
 
-            /*TODO
+            /**
                As another server is used for making POST request
                there is some difference in data structure.
-               This server accept POST next parameters
+               This server accept to POST request next parameters
                     String -> title: 'foo',
                     String -> body: 'bar',
                     Int    -> userId: 1,
-                    That's why as password parameter its length is passed
+               That's why as password parameter its length is passed
 
                https://jsonplaceholder.typicode.com/guide/
              */
