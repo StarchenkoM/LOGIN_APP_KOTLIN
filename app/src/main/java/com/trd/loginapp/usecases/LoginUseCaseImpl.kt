@@ -45,6 +45,7 @@ class LoginUseCaseImpl @Inject constructor(
              */
             val code = phoneNumber.substring(0, 4)
             val number = phoneNumber.substring(4, phoneNumber.lastIndex + 1)
+            //I assume that password parameter should be encrypted
             val pass = password.length
             val loginData = LoginData(code, number, pass)
             repository.postLoginData(loginData)
