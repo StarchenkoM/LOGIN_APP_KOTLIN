@@ -33,15 +33,15 @@ class LoginUseCaseImpl @Inject constructor(
         } else {
 
             /**
-               As another server is used for making POST request
-               there is some difference in data structure.
-               This server accept to POST request next parameters
-                    String -> title: 'foo',
-                    String -> body: 'bar',
-                    Int    -> userId: 1,
-               That's why as password parameter its length is passed
+            As another server is used for making POST request
+            there is some difference in data structure.
+            This server accept to POST request next parameters
+                String -> title: 'foo',
+                String -> body: 'bar',
+                Int    -> userId: 1,
+            That's why as password parameter its length is passed
 
-               https://jsonplaceholder.typicode.com/guide/
+            https://jsonplaceholder.typicode.com/guide/
              */
             val code = phoneNumber.substring(0, 4)
             val number = phoneNumber.substring(4, phoneNumber.lastIndex + 1)

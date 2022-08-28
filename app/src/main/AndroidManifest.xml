@@ -31,7 +31,7 @@
         <activity
             android:name=".homescreen.HomeScreen"
             android:exported="true"
-            android:theme="@style/Theme.LoginApp"/>
+            android:theme="@style/Theme.LoginApp" />
     </application>
 
 </manifest>

@@ -30,7 +30,6 @@ class LoginViewModel @Inject constructor(
                 try {
                     val state = loginUseCase.login(phoneNumber, password)
                     _loginStateLiveData.postValue(state)
-//                    _loginStateLiveData.postValue(LoginError)
                 } catch (e: Exception) {
                     _loginStateLiveData.postValue(LoginError)
                 }

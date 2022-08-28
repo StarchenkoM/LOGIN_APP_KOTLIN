@@ -10,13 +10,16 @@
     <string name="password_too_short_error">Password should contain at least 4 symbols</string>
     <string name="invalid_phone_number_error">Invalid Phone Number</string>
     <string name="login_error">Login Error</string>
+
     <string name="sign_in">Sign in</string>
     <string name="profile_label">Profile</string>
+    <string name="tips_text">TIPS</string>
+    <string name="continue_btm_text">Continue</string>
+
     <string name="phone_number_hint">Phone number</string>
     <string name="name_hint">Name</string>
     <string name="surname_hint">Surname</string>
-    <string name="tips_text">TIPS</string>
-    <string name="continue_btm_text">Continue</string>
     <string name="password_hint">Password</string>
+
 
 </resources>

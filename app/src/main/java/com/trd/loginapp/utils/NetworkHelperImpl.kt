@@ -3,7 +3,6 @@ package com.trd.loginapp.utils
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import com.trd.loginapp.utils.NetworkHelper
 
 class NetworkHelperImpl(val context: Context) : NetworkHelper {
 

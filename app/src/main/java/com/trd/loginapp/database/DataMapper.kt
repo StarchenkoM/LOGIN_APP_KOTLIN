@@ -11,8 +11,8 @@ class DataMapper @Inject constructor() {
         name = apiItem.name,*/
 
         phoneNumber = apiItem.phone_code + apiItem.phone_number,
-        surname = "Dou",
-        name = "John",
+        surname = "Dou", // temporary hardcoded as current server returns passed phone number and phone code
+        name = "John", // temporary hardcoded as current server returns passed phone number and phone code
     )
 
     fun mapDBItemToUserItem(dbItem: UserRoomEntity) = UserItem(

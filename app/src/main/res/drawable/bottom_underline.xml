@@ -2,10 +2,10 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:bottom="8dp"
-        android:top="28dp"
         android:end="0dp"
         android:gravity="bottom"
-        android:start="0dp">
+        android:start="0dp"
+        android:top="28dp">
 
         <shape>
             <size android:height="1dp" />
@@ -13,14 +13,3 @@
         </shape>
     </item>
 </layer-list>
-<!--<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle" >
-
-    <size
-        android:height="1dp"
-        android:width="70dp" />
-
-    <solid android:color="@android:color/black" />
-
-</shape>-->
