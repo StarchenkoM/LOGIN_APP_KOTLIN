@@ -16,7 +16,8 @@ class LoginUseCaseImpl @Inject constructor(
 ) : LoginUseCase {
 
     override suspend fun login(phoneNumber: String, password: String): LoginState {
-        return if (!networkHelper.isOnline()) {
+        return if
+                (!networkHelper.isOnline()) {
             NetworkFailure
         } else if (phoneNumber.isEmpty()) {
             EmptyPhoneNumber

@@ -5,8 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.trd.loginapp.states.LoginState
-import com.trd.loginapp.states.LoginState.Loading
-import com.trd.loginapp.states.LoginState.LoginError
+import com.trd.loginapp.states.LoginState.*
 import com.trd.loginapp.usecases.LoginUseCase
 import com.trd.loginapp.utils.NetworkHelper
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -24,8 +23,8 @@ class LoginViewModel @Inject constructor(
     val loginStateLiveData: LiveData<LoginState> get() = _loginStateLiveData
 
     fun login(phoneNumber: String, password: String) {
-        _loginStateLiveData.postValue(Loading)
         if (networkHelper.isOnline()) {
+            _loginStateLiveData.postValue(Loading)
             viewModelScope.launch(Dispatchers.IO) {
                 try {
                     val state = loginUseCase.login(phoneNumber, password)
@@ -34,6 +33,8 @@ class LoginViewModel @Inject constructor(
                     _loginStateLiveData.postValue(LoginError)
                 }
             }
+        }else{
+            _loginStateLiveData.postValue(NetworkFailure)
         }
     }
 }
